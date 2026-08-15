@@ -44,10 +44,10 @@ contract FreelanceBountyBoard {
     // - What does a bounty need to remember? (employer, description, skill,
     //   amount, status) A struct is a good fit here.
     struct {
-        employer,
-        description,
-        skill,
-        amount,
+        address employer,
+        string description,
+        string skill,
+        uint256 amount,
         Status status
     }
 
@@ -163,6 +163,7 @@ contract FreelanceBountyBoard {
     /// @notice True if this freelancer applied for this bounty
     function hasApplied(uint256 bountyId, address freelancer) external view returns (bool) {
         // Your implementation here
+
     }
 
     /// @notice All of a bounty's details, in this exact order
