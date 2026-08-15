@@ -133,11 +133,10 @@ A decentralised oracle network ensures that whatever code or logic is in the blo
   attacker their own stake. The cost of that stake is also what makes Sybil
   attacks - one actor spinning up thousands of fake nodes - uneconomic.
 
-**Your Answer:** [A/B/C/
+**Your Answer:** D
 
 **Your Reasoning:**
-[2-3 sentences. What does an attacker actually need to acquire to threaten a PoS
-chain, and what do they stand to lose? Name one difference from Proof of Work.]
+An attacker can create multiple nodes so that they can have majority rule over the blockchain. This results in the threatened security of all the other legitimate transactions that have been made in the network. Proof of work solves the problem where for each transaction made, therre has to be an amount that is paid to the processors of the transaction for approving the transaction.
 
 ---
 
