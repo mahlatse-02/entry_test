@@ -138,6 +138,12 @@ contract FreelanceBountyBoard {
     // rather than transfer() or send().
     function approveAndPay(uint256 bountyId, address freelancer) external {
         // Your implementation here
+        Bounty storage b = bounties[bountyId];
+        require(msg.sender == b.employer, "Not the employer");
+        b.status = Status.Completed;
+
+        (bool ok, ) = freelancer.call{value: b.amount}("");
+        require(ok, "Transfer failed");
     }
 
     // -----------------------------------------------------------------------
