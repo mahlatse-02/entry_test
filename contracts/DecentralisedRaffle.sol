@@ -36,7 +36,9 @@ contract DecentralisedRaffle {
     // - One call to enterRaffle() buys ONE entry, and a player may enter many
     //   times. An array of addresses records every entry in order - the same
     //   address simply appears more than once, which gives them better odds.
+    address[] public entries;
     // - You also need the number of UNIQUE players, for the 3-player minimum.
+    address[] public uniquePlayers;
     // - The pot is just this contract's balance.
 
     constructor() {
