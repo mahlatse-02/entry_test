@@ -264,12 +264,13 @@ An attacker would make multiple payments to the same address multiple times beca
 
 ## SUBMISSION CHECKLIST
 
-- [ ] Every `**Your Answer:**` line contains a single letter and nothing else
-- [ ] You gave reasoning for all 8 questions
-- [ ] For Question 2 you showed your working
+- [X] Every `**Your Answer:**` line contains a single letter and nothing else
+- [X] You gave reasoning for all 8 questions
+- [X] For Question 2 you showed your working
 - [ ] You committed and pushed to your fork
 
 ---
 
 **Challenges faced:** [What was difficult? Which concepts are you least
 confident about? Answering this honestly does not cost you marks.]
+The logic behind identifying where an attacker would identify a vulnerability in the code because I am not overly familliar with the flow of logic when it comes to smart contracts and security measures 
