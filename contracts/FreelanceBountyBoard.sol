@@ -150,7 +150,7 @@ contract FreelanceBountyBoard {
         // Your implementation here
         // Check if the address is already registered
         require(!isRegistered, "Freelancer is already registered");
-        if (isRRegistered) {
+        if (isRegistered) {
             return True;
         }
     }
