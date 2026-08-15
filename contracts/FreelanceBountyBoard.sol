@@ -50,6 +50,7 @@ contract FreelanceBountyBoard {
         uint256 amount,
         Status status
     }
+    Bounty{} public bounties;
 
     // - How do you remember who applied for which bounty?
     // We need to map the bountyId to the freelancer
@@ -69,7 +70,7 @@ contract FreelanceBountyBoard {
     // - Emit FreelancerRegistered(msg.sender, skill)
 
     // Add a skill for the freelancer based on the bountyId
-
+    address[] public skills;
     function registerFreelancer(string calldata skill) external {
         // Your implementation here
     }
@@ -92,6 +93,7 @@ contract FreelanceBountyBoard {
         returns (uint256)
     {
         // Your implementation here
+
 
     }
 
