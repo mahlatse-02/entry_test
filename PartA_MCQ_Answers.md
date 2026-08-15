@@ -181,12 +181,10 @@ them.
 - **D)** The seed phrase is just a backup of your public address, which is why it
   is safe to share with support staff if you get stuck.
 
-**Your Answer:** [A/B/C/D]
+**Your Answer:** C
 
 **Your Reasoning:**
-[2-3 sentences. What does a signature prove? What is the trade-off a user accepts
-by holding their own keys, and what does account abstraction do to soften it?]
-
+The signature proves that the node is part of the network. The trade off of a user being in possession of their own keys is compromising security measures where a user can have their private keys stotrd in a place that is visible to other users or the public that can attack the network. Account abstraction solves this by writing the keys in hash that cannot be readable 
 ---
 
 ## PART 2: Applying It To Your Contracts
