@@ -155,15 +155,21 @@ contract FreelanceBountyBoard {
         }
     }
 
+
     /// @notice The skill this freelancer registered with ("" if unregistered)
     function getSkill(address freelancer) external view returns (string memory) {
         // Your implementation here
     }
 
+    bool public hasApplied;
     /// @notice True if this freelancer applied for this bounty
     function hasApplied(uint256 bountyId, address freelancer) external view returns (bool) {
         // Your implementation here
-
+        // Check if a freelancer has already applied, return true if so
+        require(!hasApplied, "Freelancer has applied");
+        if (hasApplied) {
+            return True;
+        }
     }
 
     /// @notice All of a bounty's details, in this exact order
