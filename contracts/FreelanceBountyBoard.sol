@@ -28,6 +28,7 @@ contract FreelanceBountyBoard {
     event WorkSubmitted(uint256 indexed bountyId, address indexed freelancer, string submissionUrl);
     event BountyPaid(uint256 indexed bountyId, address indexed freelancer, uint256 amount);
 
+    
     address public owner;
 
     /// @notice Total number of bounties ever posted. The first bounty has id 1.
@@ -36,8 +37,20 @@ contract FreelanceBountyBoard {
     // TODO: Define the rest of your state variables here.
     // Consider:
     // - How do you record who is registered, and with which skill?
+    address public freelancer;
+    string public skill;
+    address public employer;
+    uint256 public bountyId;
     // - What does a bounty need to remember? (employer, description, skill,
     //   amount, status) A struct is a good fit here.
+    struct {
+        employer,
+        description,
+        skill,
+        amount,
+        Status status
+    }
+
     // - How do you remember who applied for which bounty?
 
     constructor() {
