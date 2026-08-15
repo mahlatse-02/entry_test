@@ -67,9 +67,11 @@ contract FreelanceBountyBoard {
     // - Revert if the caller is already registered
     // - Revert if the skill string is empty
     // - Emit FreelancerRegistered(msg.sender, skill)
+
+    // Add a skill for the freelancer based on the bountyId
+
     function registerFreelancer(string calldata skill) external {
         // Your implementation here
-
     }
 
     // -----------------------------------------------------------------------
@@ -116,8 +118,13 @@ contract FreelanceBountyBoard {
     // - The bounty must still be Open
     // - Set the bounty's status to Submitted
     // - Emit WorkSubmitted(bountyId, msg.sender, submissionUrl)
-    function submitWork(uint256 bountyId, string calldata submissionUrl) external {
+    function submitWork(uint256 bountyId, string calldata submissionUrl) external hasApplied {
         // Your implementation here
+        Bounty storage b = bounties[bountyId];
+        require(b.status = Status.Open, "Bounty status must be open");
+        if (b.status == Status.Open) {
+            b.status = Status.Submitted;
+        } 
     }
 
     // -----------------------------------------------------------------------
@@ -144,6 +151,7 @@ contract FreelanceBountyBoard {
 
         (bool ok, ) = freelancer.call{value: b.amount}("");
         require(ok, "Transfer failed");
+        emit BountyPaid(uint256 indexed bountyId, address indexed freelancer, uint256 amount);
     }
 
     // -----------------------------------------------------------------------
