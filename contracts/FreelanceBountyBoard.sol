@@ -121,7 +121,7 @@ contract FreelanceBountyBoard {
     function submitWork(uint256 bountyId, string calldata submissionUrl) external hasApplied {
         // Your implementation here
         Bounty storage b = bounties[bountyId];
-        require(b.status = Status.Open, "Bounty status must be open");
+        require(b.status == Status.Open, "Bounty status must be open");
         if (b.status == Status.Open) {
             b.status = Status.Submitted;
         } 
