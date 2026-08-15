@@ -78,9 +78,12 @@ You send a simple ETH transfer on Ethereum.
 - **C)** 0.00042 ETH (about $1.26)
 - **D)** 0.0042 ETH (about $12.60)
 
-**Your Answer:** [A/B/C/D]
+**Your Answer:** C
 
 **Your Calculation:**
+Total gas cost in gwei = 21 000 x 20 gwei = 420 000 gwei
+Total gas cost in ETH = 420 000 x 10^-9 = 0.00042 ETH 
+Total gas cost in $ = 0.00042 x 3 000 = $1.26
 
 - Total gas cost in gwei = [show your working]
 - Converted to ETH (remember: 1 ETH = 1,000,000,000 gwei) = [show your working]
@@ -88,6 +91,7 @@ You send a simple ETH transfer on Ethereum.
 
 [Then, in one or two sentences: why does a smart contract function that writes
 to storage cost far more than this simple transfer?]
+
 
 ---
 
