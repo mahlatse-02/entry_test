@@ -92,6 +92,7 @@ contract FreelanceBountyBoard {
         returns (uint256)
     {
         // Your implementation here
+
     }
 
     // -----------------------------------------------------------------------
@@ -106,7 +107,7 @@ contract FreelanceBountyBoard {
     //
     // Hint: Solidity cannot compare strings with ==. Compare hashes instead:
     //   keccak256(bytes(a)) == keccak256(bytes(b))
-    function applyForBounty(uint256 bountyId) external {
+    function applyForBounty(uint256 bountyId) external isRegistered {
         // Your implementation here
     }
 
@@ -124,7 +125,8 @@ contract FreelanceBountyBoard {
         require(b.status == Status.Open, "Bounty status must be open");
         if (b.status == Status.Open) {
             b.status = Status.Submitted;
-        } 
+        }
+        emit WorkSubmitted(bountyId, msg.sender, submissionUrl);
     }
 
     // -----------------------------------------------------------------------
