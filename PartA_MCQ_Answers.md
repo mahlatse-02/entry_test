@@ -112,13 +112,10 @@ Your smart contract needs to know the current ETH/USD price.
   in a future upgrade.
 - **D)** Because API providers block blockchain nodes for security reasons.
 
-**Your Answer:** [A/B/C/D]
+**Your Answer:** B
 
 **Your Reasoning:**
-[2-3 sentences. Why would a single company running the only oracle undermine the
-point of building on a blockchain? What does a decentralised oracle network do
-about that?]
-
+A decentralised oracle network ensures that whatever code or logic is in the blockchain cannot be changed after deployment  to ensure uniform data that is distributed to each node that is part of the network. This is done by giving the specific block a hash that is used for identification. A contract can also not be changed unless it is upgradable, which mean for an update to occur, a new block would have to have the modified contract which will have its own hash.
 ---
 
 ### Question 4: Consensus and Attacks (3 marks + 2 for reasoning)
@@ -136,7 +133,7 @@ about that?]
   attacker their own stake. The cost of that stake is also what makes Sybil
   attacks - one actor spinning up thousands of fake nodes - uneconomic.
 
-**Your Answer:** [A/B/C/D]
+**Your Answer:** [A/B/C/
 
 **Your Reasoning:**
 [2-3 sentences. What does an attacker actually need to acquire to threaten a PoS
