@@ -218,12 +218,10 @@ uint256 index = uint256(
 - **D)** It is insecure on Ethereum but safe on a Layer 2, because the sequencer
   orders transactions privately.
 
-**Your Answer:** [A/B/C/D]
+**Your Answer:** B
 
 **Your Reasoning:**
-[2-3 sentences. Who specifically can manipulate this draw, and what would they
-have to do? You will implement this shortcut in Part B anyway - so be clear
-about what you are shipping.]
+The labelled owner is the only one who can manipulate the draw by changing the number of players that are stored in the list. This would be biased in a sense that the owner can repeatedly draw from a player that is desired by them.
 
 ---
 
