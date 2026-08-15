@@ -156,12 +156,10 @@ An attacker can create multiple nodes so that they can have majority rule over t
 - **D)** It reduces gas costs by lowering the base fee on Ethereum itself
   whenever the rollup is active.
 
-**Your Answer:** [A/B/C/D]
+**Your Answer:** A
 
 **Your Reasoning:**
-[2-3 sentences. Most rollups today run a single centralised sequencer. What can
-that sequencer do to you, and what can it *not* do?]
-
+The sequencer allows one to choose a fee that is proportional to the processing time where the higher the price, the faster the transaction procesing because nodes will choose to gain a higher currency value. When this is done on a rollup, the shared transaction cost decreases 
 ---
 
 ### Question 6: Wallets, Keys and Signatures (3 marks + 2 for reasoning)
