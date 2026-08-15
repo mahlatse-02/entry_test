@@ -52,6 +52,8 @@ contract FreelanceBountyBoard {
     }
 
     // - How do you remember who applied for which bounty?
+    // We need to map the bountyId to the freelancer
+    
 
     constructor() {
         owner = msg.sender;
@@ -67,6 +69,7 @@ contract FreelanceBountyBoard {
     // - Emit FreelancerRegistered(msg.sender, skill)
     function registerFreelancer(string calldata skill) external {
         // Your implementation here
+
     }
 
     // -----------------------------------------------------------------------
@@ -141,9 +144,15 @@ contract FreelanceBountyBoard {
     // TODO 6: View functions (the marker calls all four)
     // -----------------------------------------------------------------------
 
+    bool public isRgistered;
     /// @notice True if this address has registered as a freelancer
     function isRegistered(address freelancer) external view returns (bool) {
         // Your implementation here
+        // Check if the address is already registered
+        require(!isRegistered, "Freelancer is already registered");
+        if (!isRRegistered) {
+            return True;
+        }
     }
 
     /// @notice The skill this freelancer registered with ("" if unregistered)
