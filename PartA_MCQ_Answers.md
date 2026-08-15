@@ -255,11 +255,10 @@ function approveAndPay(uint256 bountyId, address freelancer) external {
 - **D)** The `require` on `msg.sender` should use `tx.origin` instead, so that
   contracts cannot call the function at all.
 
-**Your Answer:** [A/B/C/D]
+**Your Answer:** C
 
 **Your Reasoning:**
-[2-3 sentences. Walk through the exact sequence an attacking contract would use.
-Then apply the fix in your own `approveAndPay` - it is auto-marked.]
+An attacker would make multiple payments to the same address multiple times because there is no check to verify if the freelancer has been paid before making a payment.
 
 ---
 
