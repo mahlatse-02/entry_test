@@ -184,7 +184,14 @@ contract FreelanceBountyBoard {
             Status status
         )
     {
-        // Your implementation here
+        return {
+            uint256 bountyId,
+            adress employer,
+            string memory description,
+            string memory skillRequired,
+            uint256 amount,
+            Status status
+        }
     }
 
     // BONUS (not auto-marked, describe it in PartB_Design.md instead):
