@@ -43,7 +43,7 @@ contract FreelanceBountyBoard {
     uint256 public bountyId;
     // - What does a bounty need to remember? (employer, description, skill,
     //   amount, status) A struct is a good fit here.
-    struct {
+    struct Bounty {
         address employer,
         string description,
         string skill,
@@ -185,7 +185,6 @@ contract FreelanceBountyBoard {
         )
     {
         return {
-            uint256 bountyId,
             adress employer,
             string memory description,
             string memory skillRequired,
